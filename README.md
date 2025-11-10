@@ -1,24 +1,31 @@
-# 🎓 PhD-Level Economic Intelligence Platform
+# Economic Intelligence Platform
 
-**World-Class Academic Research & Professional Economic Forecasting System**
+**Professional Economic Forecasting & Analysis System**
 
-A comprehensive, cutting-edge economic intelligence platform combining **Nobel-winning econometric methods**, **top-tier journal methodologies**, **AI-powered analysis**, and **institutional-grade risk modeling**. Used by **PhD researchers**, **academic institutions**, **central banks**, and **financial organizations** for publication-quality economic analysis and forecasting.
+A comprehensive economic intelligence platform combining **advanced econometric methods**, **real-time data integration**, **AI-powered analysis**, and **sophisticated risk modeling**. Designed for **economists**, **financial analysts**, **researchers**, and **policy makers** who need reliable economic forecasting and analytical capabilities.
 
-## 🏆 **Academic Excellence Achieved**
+## 🚀 **Core Capabilities**
 
-### **🎓 PhD-Level Research Framework**
-- **Nobel-Winning Methods**: Engle-Granger, Sims, Hansen econometric techniques
-- **Top-Tier Journal Standards**: AER, QJE, JPE, Econometrica compliance
-- **Publication-Ready Outputs**: LaTeX tables, academic papers, citations
-- **Advanced Hypothesis Testing**: 20+ statistical frameworks
-- **Comprehensive Validation**: Robustness checks and specification testing
+### **📊 Advanced Economic Analysis**
+- **Time Series Econometrics**: Unit root tests, cointegration analysis, VAR models
+- **Forecasting Models**: Prophet, ARIMA, LSTM, ensemble methods
+- **Risk Analytics**: Value at Risk, stress testing, Monte Carlo simulation
+- **Statistical Testing**: Comprehensive hypothesis testing framework
+- **Validation & Robustness**: Model validation and sensitivity analysis
 
-### **🏛️ Institutional-Grade Analytics**
-- **Real-Time Data Integration**: FRED, BLS, Census, EIA APIs
-- **Advanced Forecasting Models**: Prophet, Ensemble, VAR, LSTM, VECM
-- **Sophisticated Risk Management**: VaR, CVaR, Stress Testing, Monte Carlo
-- **AI-Powered Narratives**: GPT-generated economic commentary
-- **Professional CLI Tools**: Enterprise deployment ready
+### **🔗 Real-Time Data Integration**
+- **Economic Data Sources**: FRED, BLS, Census Bureau, EIA APIs
+- **Market Data**: Real-time financial market integration
+- **Automated Updates**: Scheduled data fetching and processing
+- **Data Quality Control**: Automated validation and cleaning
+- **Flexible Configuration**: Multiple data source support
+
+### **🤖 Intelligent Analytics**
+- **AI-Powered Reports**: Automated economic narrative generation
+- **Pattern Recognition**: Machine learning-based trend detection
+- **Anomaly Detection**: Automated outlier and change point detection
+- **Natural Language Processing**: Economic text analysis and summarization
+- **Customizable Outputs**: Tailored reporting and visualization
 
 ## 🚀 Advanced Features
 
@@ -159,68 +166,56 @@ TWITTER_ACCESS_TOKEN=your_twitter_token
 TWITTER_ACCESS_TOKEN_SECRET=your_twitter_token_secret
 ```
 
-## 🚀 **Quick Start & Platform Demos**
+## 🚀 **Quick Start Guide**
 
-### **🎓 PhD-Level Research Platform**
+### **Basic Setup & Demo**
 ```bash
-# Complete PhD research demonstration
-python scripts/phd_research_cli.py demo
-
-# Advanced unit root analysis
-python scripts/phd_research_cli.py unit-root-analysis \
-  --data data/processed/phd_sample_data.csv \
-  --variable GDP --tests adf kpss --output
-
-# Sophisticated cointegration testing
-python scripts/phd_research_cli.py cointegration-test \
-  --data data/processed/phd_sample_data.csv \
-  --variables GDP Consumption Investment \
-  --method both --output
-
-# Complete research paper generation
-python scripts/phd_research_cli.py research-paper \
-  --data data/processed/phd_sample_data.csv \
-  --methodology time-series \
-  --title "Macroeconomic Analysis" \
-  --author "PhD Researcher"
-```
-
-### **🏛️ Professional Economic Intelligence**
-```bash
-# Professional platform status
-python scripts/professional_cli.py status
-
-# Institutional-grade forecasting
-python scripts/professional_cli.py forecast \
-  --indicator GDP --steps 12 --model ensemble
-
-# Advanced risk analysis
-python scripts/professional_cli.py risk-analysis \
-  --indicators GDP CPI UNRATE \
-  --confidence-level 0.99
-
-# AI-powered economic narratives
-python scripts/professional_cli.py analyze \
-  --indicators GDP CPI UNRATE FEDFUNDS \
-  --include-narrative
-```
-
-### **📊 Core Platform Capabilities**
-```bash
-# Full platform demonstration
+# Quick platform demonstration
 python scripts/demo.py
 
 # Simple capabilities showcase
 python scripts/simple_demo.py
 
-# Professional setup validation
-python scripts/professional_setup.py
-
-# Core economic analysis
+# Basic economic analysis
 python scripts/analyze.py --indicators GDP CPI UNRATE
 
-# Advanced forecasting
+# Core forecasting
 python scripts/forecast.py --indicator GDP --steps 12 --model prophet
+```
+
+### **Advanced Economic Analysis**
+```bash
+# Comprehensive economic analysis
+python scripts/advanced_analyze.py comprehensive-analysis \
+  --indicators GDP CPI UNRATE FEDFUNDS \
+  --forecast-steps 12 --include-risk
+
+# Unit root and stationarity testing
+python scripts/phd_research_cli.py unit-root-analysis \
+  --data data/processed/phd_sample_data.csv \
+  --variable GDP --tests adf kpss
+
+# Cointegration analysis
+python scripts/phd_research_cli.py cointegration-test \
+  --data data/processed/phd_sample_data.csv \
+  --variables GDP Consumption Investment
+
+# Risk analysis and stress testing
+python scripts/professional_cli.py risk-analysis \
+  --indicators GDP CPI UNRATE --confidence-level 0.99
+```
+
+### **Professional Platform Features**
+```bash
+# Platform status and configuration
+python scripts/professional_cli.py status
+
+# AI-powered economic narratives (requires OpenAI API)
+python scripts/professional_cli.py analyze \
+  --indicators GDP CPI UNRATE --include-narrative
+
+# Professional setup validation
+python scripts/professional_setup.py
 ```
 
 ### Cutting-Edge Forecasting
@@ -317,74 +312,25 @@ streamlit run notebooks/economic_dashboard.py
 - **Market Commentary**: Social media sentiment tracking
 - **Economic Reports**: Document sentiment extraction
 
-## 🎓 **PhD-Level Academic Research**
+## 🔬 **Advanced Econometric Analysis**
 
-### **🔬 Advanced Econometric Analysis**
+### **Time Series Analysis**
 ```python
-# PhD-level research framework
-from usa_econ.research.phd_research_framework import (
-    PhDResearchFramework, ResearchMethodology, HypothesisTest
-)
-
-# Initialize academic research platform
-framework = PhDResearchFramework(significance_level=0.05)
-
-# Define formal research question
-rq = framework.define_research_question(
-    title="Macroeconomic Relationships and Dynamics",
-    methodology=ResearchMethodology.TIME_SERIES_ECONOMETRICS,
-    hypothesis="Economic variables exhibit systematic relationships",
-    null_hypothesis="No systematic relationships exist",
-    alternative_hypothesis="Significant relationships can be identified"
-)
-
-# Comprehensive unit root testing
-unit_root_results = framework.conduct_time_series_analysis(
-    data, tests=[
-        HypothesisTest.UNIT_ROOT_ADF,
-        HypothesisTest.UNIT_ROOT_KPSS
-    ]
-)
-
-# Sophisticated cointegration analysis
-cointegration_results = framework.conduct_time_series_analysis(
-    data, tests=[
-        HypothesisTest.COINTEGRATION_ENGLE_GRANGER,
-        HypothesisTest.COINTEGRATION_JOHANSEN
-    ]
-)
-
-# Generate publication-ready academic table
-latex_table = framework.generate_academic_table(
-    results, "Macroeconomic Analysis"
-)
-
-# Complete research paper generation
-research_report = framework.generate_research_report(
-    include_robustness=True, include_figures=True
-)
-```
-
-### **🏆 Nobel-Winning Methods**
-```python
-# Academic econometrician with cutting-edge methods
+# Advanced econometric analysis
 from usa_econ.models.academic_econometrics import AcademicEconometrician
 
 econometrician = AcademicEconometrician()
 
-# Engle-Granger cointegration analysis
-cointegration = econometrician.cointegration_analysis(
-    data, max_lags=4
-)
+# Unit root testing
+unit_root_results = econometrician.unit_root_tests(data)
 
-# Johansen maximum likelihood procedure
+# Cointegration analysis
+cointegration = econometrician.cointegration_analysis(data, max_lags=4)
 johansen_results = cointegration['johansen']
 print(f"Cointegration rank: {johansen_results['cointegration_rank']}")
 
-# Vector autoregression with comprehensive diagnostics
-var_results = econometrician.vector_autoregression_analysis(
-    data, max_lags=4
-)
+# Vector autoregression with diagnostics
+var_results = econometrician.vector_autoregression_analysis(data, max_lags=4)
 
 # Granger causality testing
 granger_results = var_results['granger_causality']
@@ -393,15 +339,32 @@ for direction, gc_result in granger_results.items():
         print(f"{direction}: Significant causal relationship")
 
 # Structural break detection
-break_analysis = econometrician.structural_break_analysis(
-    data['GDP'], max_breaks=5
+break_analysis = econometrician.structural_break_analysis(data['GDP'], max_breaks=5)
+```
+
+### **Research Framework**
+```python
+# Research analysis framework
+from usa_econ.research.phd_research_framework import (
+    PhDResearchFramework, ResearchMethodology, HypothesisTest
 )
 
-# Panel data econometrics (if panel data available)
-panel_results = econometrician.panel_data_analysis(
-    panel_data, entity_col='country', time_col='year',
-    dependent_var='gdp', independent_vars=['investment', 'education']
+# Initialize research framework
+framework = PhDResearchFramework(significance_level=0.05)
+
+# Conduct comprehensive analysis
+unit_root_results = framework.conduct_time_series_analysis(
+    data, tests=[HypothesisTest.UNIT_ROOT_ADF, HypothesisTest.UNIT_ROOT_KPSS]
 )
+
+cointegration_results = framework.conduct_time_series_analysis(
+    data, tests=[HypothesisTest.COINTEGRATION_ENGLE_GRANGER, 
+                HypothesisTest.COINTEGRATION_JOHANSEN]
+)
+
+# Generate professional reports
+latex_table = framework.generate_academic_table(results, "Economic Analysis")
+research_report = framework.generate_research_report(include_robustness=True)
 ```
 
 ### **📊 Advanced Bayesian & Machine Learning**
