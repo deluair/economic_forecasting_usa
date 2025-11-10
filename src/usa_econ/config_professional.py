@@ -333,25 +333,22 @@ class ProfessionalConfig:
         return config
     
     def save_to_file(self, config_path: Path) -> None:
-        """Save configuration to file."""
+        """Save configuration to file.
+
+        SECURITY NOTE: API keys are NOT saved to this file for security reasons.
+        API keys should ONLY be stored in the .env file, never in configuration files.
+        This prevents accidental exposure through git commits or file sharing.
+        """
         # Convert to dictionary
+        # SECURITY: API keys are deliberately excluded from serialization
         config_dict = {
             'environment': self.environment.value,
             'log_level': self.log_level.value,
             'debug_mode': self.debug_mode,
             'config_version': self.config_version,
+            # API keys are NOT saved - they must be set in .env file only
             'api': {
-                'fred_api_key': self.api.fred_api_key,
-                'bls_api_key': self.api.bls_api_key,
-                'census_api_key': self.api.census_api_key,
-                'eia_api_key': self.api.eia_api_key,
-                'alpha_vantage_api_key': self.api.alpha_vantage_api_key,
-                'openai_api_key': self.api.openai_api_key,
-                'news_api_key': self.api.news_api_key,
-                'twitter_api_key': self.api.twitter_api_key,
-                'twitter_api_secret': self.api.twitter_api_secret,
-                'twitter_access_token': self.api.twitter_access_token,
-                'twitter_access_token_secret': self.api.twitter_access_token_secret
+                '_note': 'API keys are not saved to config files for security. Set them in .env file.'
             },
             'models': {
                 'default_forecast_horizon': self.models.default_forecast_horizon,
