@@ -145,10 +145,10 @@ def bayesian_var_forecast(
     
     # Determine optimal lag order (simplified)
     max_lags = min(4, n_obs // 10)
-    best_lag = 1
+    best_lags = 1
     
     # Prepare data for Bayesian VAR
-    y = data_standardized.values[best_lag:]
+    y = data_standardized.values[best_lags:]
     X = np.column_stack([
         data_standardized.values[i:i-best_lags:-1].flatten() 
         for i in range(best_lags, n_obs)
@@ -191,7 +191,7 @@ def bayesian_var_forecast(
         
         # Iterative forecasting
         forecast = np.zeros((steps, n_vars))
-        last_obs = data_standardized.values[-best_lag:].flatten()
+        last_obs = data_standardized.values[-best_lags:].flatten()
         
         for step in range(steps):
             x = last_obs[-best_lags*n_vars:].reshape(1, -1)

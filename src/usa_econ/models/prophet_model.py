@@ -14,20 +14,22 @@ def prophet_forecast(
     weekly_seasonality: bool = False,
     daily_seasonality: bool = False,
     column: str | None = None,
-    uncertainty_samples: int = 1000
+    uncertainty_samples: int = 1000,
+    alpha: float = 0.05
 ) -> pd.DataFrame:
     """Fit Prophet model and return forecast with confidence intervals.
-    
+
     Args:
         data: Time series data (Series or DataFrame)
         steps: Number of periods to forecast
         freq: Frequency of the time series ('M' for monthly, 'D' for daily, etc.)
         yearly_seasonality: Include yearly seasonality
-        weekly_seasonality: Include weekly seasonality  
+        weekly_seasonality: Include weekly seasonality
         daily_seasonality: Include daily seasonality
         column: Column name if data is DataFrame
         uncertainty_samples: Number of samples for uncertainty intervals
-        
+        alpha: Significance level for confidence intervals (default 0.05 for 95% CI)
+
     Returns:
         DataFrame with forecast containing columns: ds, yhat, yhat_lower, yhat_upper
     """
@@ -53,7 +55,10 @@ def prophet_forecast(
     
     # Remove any missing values
     df = df.dropna()
-    
+
+    # Convert alpha to interval_width (e.g., alpha=0.05 -> interval_width=0.95)
+    interval_width = 1 - alpha
+
     # Initialize and fit Prophet model
     model = Prophet(
         yearly_seasonality=yearly_seasonality,
@@ -64,7 +69,7 @@ def prophet_forecast(
         seasonality_prior_scale=10.0,
         holidays_prior_scale=10.0,
         mcmc_samples=0,
-        interval_width=0.8,
+        interval_width=interval_width,
         growth='linear'
     )
     
