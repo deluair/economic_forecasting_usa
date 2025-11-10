@@ -1,0 +1,21 @@
+# Environments and secrets
+.env
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Data and outputs
+data/
+!data/.gitkeep
+logs/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db

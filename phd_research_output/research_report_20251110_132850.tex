@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{natbib}
+\title{Economic Research Report}
+\author{PhD Research Framework}
+\date{November 10, 2025}
+\begin{document}
+\maketitle
+\begin{abstract}
+This report presents findings from a comprehensive economic analysis 
+using advanced econometric methods. The analysis includes time series 
+econometrics, hypothesis testing, and robustness checks following 
+standards from top-tier academic journals.
+\end{abstract}
+\section{Research Questions}
+\subsection{Question 1: Macroeconomic Relationships and Cointegration Analysis}
+\textbf{Methodology:} Time Series Econometrics
+\textbf{Hypothesis:} Economic variables exhibit predictable relationships
+\textbf{Null:} No systematic relationships exist between economic variables
+\textbf{Alternative:} Significant economic relationships can be identified
+\section{Empirical Results}
+\begin{table}[htbp]
+\centering
+\caption{Empirical Results}
+\label{tab:empirical_results}
+\begin{tabular}{lcccc}
+\toprule
+Test & Statistic & p-value & Critical & Significance \\
+\midrule
+GDP_ADF & 141407817931410.500 & 1.000 & -4.029 & No \\
+GDP_KPSS & 0.059 & 0.100 & 0.119 & No \\
+Consumption_ADF & 5577663697135.418 & 1.000 & -4.031 & No \\
+Consumption_KPSS & 0.149 & 0.047 & 0.119 & No** \\
+Investment_ADF & 386056182868959.500 & 1.000 & -4.033 & No \\
+Investment_KPSS & 4.687 & 0.010 & 0.119 & No** \\
+Unemployment_ADF & -2.590 & 0.284 & -4.028 & No \\
+Unemployment_KPSS & 0.484 & 0.010 & 0.119 & No** \\
+Inflation_ADF & 980294573558715.500 & 1.000 & -4.028 & No \\
+Inflation_KPSS & 3.575 & 0.010 & 0.119 & No** \\
+Engle_Granger & -2.168 & 0.218 & -3.483 & No \\
+Johansen_Trace & 49.888 & 0.050 & 79.342 & No* \\
+\bottomrule
+\end{tabular}
+\end{table}
+\subsection{Interpretation}
+The Augmented Dickey-Fuller Unit Root Test yields a statistic of 141407817931410.500 
+with a p-value of 1.000, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The KPSS Stationarity Test yields a statistic of 0.059 
+with a p-value of 0.100, indicating 
+no statistical significance at the 0.05 level. 
+Stationary \par
+The Augmented Dickey-Fuller Unit Root Test yields a statistic of 5577663697135.418 
+with a p-value of 1.000, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The KPSS Stationarity Test yields a statistic of 0.149 
+with a p-value of 0.047, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The Augmented Dickey-Fuller Unit Root Test yields a statistic of 386056182868959.500 
+with a p-value of 1.000, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The KPSS Stationarity Test yields a statistic of 4.687 
+with a p-value of 0.010, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The Augmented Dickey-Fuller Unit Root Test yields a statistic of -2.590 
+with a p-value of 0.284, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The KPSS Stationarity Test yields a statistic of 0.484 
+with a p-value of 0.010, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The Augmented Dickey-Fuller Unit Root Test yields a statistic of 980294573558715.500 
+with a p-value of 1.000, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The KPSS Stationarity Test yields a statistic of 3.575 
+with a p-value of 0.010, indicating 
+no statistical significance at the 0.05 level. 
+Non-stationary \par
+The Engle-Granger Cointegration Test yields a statistic of -2.168 
+with a p-value of 0.218, indicating 
+no statistical significance at the 0.05 level. 
+Not cointegrated \par
+The Johansen Cointegration Test (Trace) yields a statistic of 49.888 
+with a p-value of 0.050, indicating 
+no statistical significance at the 0.05 level. 
+Cointegration rank: 0 \par
+\section{Robustness Checks}
+\subsection{Alternative_Significance}
+Analysis with 1% significance level \par
+\textbf{Methodology:} different_significance \par
+\textbf{Result:} Robustness check failed: 4/12 significance changes \par
+\subsection{Subsample_Analysis}
+Analysis using recent subsample \par
+\textbf{Methodology:} subsample \par
+\textbf{Result:} Robustness check failed: 4/12 significance changes \par
+\section{Conclusion}
+This analysis provides insights into the economic relationships under study. 
+The findings contribute to the literature by employing rigorous 
+econometric methods and comprehensive robustness checks. 
+\end{document}
